@@ -1,0 +1,158 @@
+<html lang="en" class="">
+    <head>
+    <meta charset="UTF-8">
+    <title>Lươn Hoèn Ngoẽn</title>
+  
+    <meta name="robots" content="noindex">
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  
+    <style class="INLINE_PEN_STYLESHEET_ID">
+      /* ---- reset ---- */
+        body {
+            margin: 0;
+            font: normal 75% Arial, Helvetica, sans-serif;
+        }
+        
+        canvas {
+            display: block;
+            vertical-align: bottom;
+        }
+        /* ---- tsparticles container ---- */
+        #tsparticles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        
+    </style>
+  
+  <link rel="prefetch" as="script" href="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.pathseg.min.js">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-engine@2/tsparticles.engine.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-external-trail@2/tsparticles.interaction.external.trail.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-move-base@2/tsparticles.move.base.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-plugin-emitters@2/tsparticles.plugin.emitters.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-shape-circle@2/tsparticles.shape.circle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-color@2/tsparticles.updater.color.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-life@2/tsparticles.updater.life.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-opacity@2/tsparticles.updater.opacity.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-updater-size@2/tsparticles.updater.size.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-firefly@2/tsparticles.preset.firefly.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- sample from https://particles.matteobruni.it/#mask -->
+  <!-- tsParticles container -->
+  <div id="tsparticles"><canvas data-generated="true" style="width: 100% !important; height: 100% !important; position: fixed !important; z-index: 0 !important; top: 0px !important; left: 0px !important; pointer-events: initial;" width="320" height="432"></canvas></div>
+  <!-- https://github.com/matteobruni/tsparticles -->
+  <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-firefly@2/tsparticles.preset.firefly.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.39.0/tsparticles.min.js"></script>
+
+  <script>
+
+    tsParticles.load("tsparticles", {
+      detectRetina: false,
+      fpsLimit: 60,
+      interactivity: {
+            detectsOn: "canvas",
+            events: {
+                onClick: {
+                    enable: true,
+                    mode: "push"
+                },
+                onHover: {
+                    enable: true,
+                    mode: "bubble"
+                },
+            },
+            modes: {
+                bubble: {
+                    distance: 250,
+                    size: 20,
+                    duration: 2,
+                    opacity: 0.6
+                },
+                push: {
+                    quantity: 10,
+                }
+            }
+        },
+      particles: {
+        color: {
+          value: "#ff0000",
+          animation: {
+            enable: true,
+            speed: 20,
+            sync: true
+          }
+        },
+        move: {
+          attract: {
+            enable: false,
+            rotate: {
+              x: 200,
+              y: 120
+            }
+          },
+          bounce: false,
+          direction: "none",
+          enable: true,
+          outMode: "bounce",
+          random: true,
+          speed: 0.5,
+          straight: false
+        },
+        number: {
+          density: {
+            enable: false,
+            area: 2000
+          },
+          limit: 0,
+          value: 400
+        },
+        opacity: {
+          animation: {
+            enable: true,
+            minimumValue: 0.1,
+            speed: 2,
+            sync: false
+          },
+          random: false,
+          value: 1
+        },
+        shape: {
+          type: "circle"
+        },
+        size: {
+          animation: {
+            enable: false,
+            minimumValue: 0.2,
+            speed: 40,
+            sync: false
+          },
+          random: true,
+          value: 10
+        }
+      },
+      polygon: {
+        move: {
+          radius: 16
+        },
+        inlineArrangement: "equidistant",
+        scale: 0.9,
+        type: "inline",
+        url: "assets/img/heart.svg"
+      }
+    });
+
+  </script>
+  
+  
+  </body></html>
